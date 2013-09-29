@@ -1,5 +1,3 @@
-@import "mixins";
-
 $bg-color: #07294d;
 $link-color: #FFC600;
 
@@ -14,4 +12,10 @@ a {
 
 time.countdown { 
 	color: $link-color;
+}
+
+.logo {
+	background-image: url(images/nothing.png);
+	width: 200px;
+	height: 100px;
 }

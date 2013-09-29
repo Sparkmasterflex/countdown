@@ -3,6 +3,7 @@ $ ->
 	$('.flip-front').append "<span class='spinner'>Loading</span>"
 	$('a[rel=external]').bind 'click', () -> this.target = "_blank"
 
+
 	# $('a.twitter').click (e) ->
 	# 	# status = " "
 	# 	# window.location = "http://twitter.com/home?status=#{status}&has"
@@ -18,7 +19,7 @@ init_countdown = () ->
 get_countdown_attrs = () ->
 	$.get "/javascripts/graduation.json", (data) ->
 		$.each data, (key, object) ->
-			$('.title').addClass 'logo' if object.logo?
+			$('.title').addClass 'logo' if object.logo
 			$('.title').html key
 
 			$('time.release-date')

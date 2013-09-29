@@ -18,7 +18,7 @@
   get_countdown_attrs = function() {
     return $.get("/javascripts/graduation.json", function(data) {
       return $.each(data, function(key, object) {
-        if (object.logo != null) $('.title').addClass('logo');
+        if (object.logo) $('.title').addClass('logo');
         $('.title').html(key);
         $('time.release-date').attr('datetime', object.date).html(moment(object.date).format("MMMM D, YYYY"));
         return $('a.learn-more').attr('href', object.link);
