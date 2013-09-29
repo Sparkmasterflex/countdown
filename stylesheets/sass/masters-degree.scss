@@ -1,0 +1,17 @@
+@import "mixins";
+
+$bg-color: #07294d;
+$link-color: #FFC600;
+
+body {
+	background: $bg-color url(/images/masters-degree/drexel.jpg) no-repeat center center;
+}
+
+a {
+	color: $link-color;
+	&:hover { color: darken($link-color, 10%); }
+}
+
+time.countdown { 
+	color: $link-color;
+}

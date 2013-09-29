@@ -26,7 +26,6 @@ html {-webkit-font-smoothing: antialiased; }
 
 body { 
   font: { size: 62.5%; family: Arial, Helvetica, san-serif; } 
-  background: #111 url(/images/rome-total-war-2-Epirus.jpg) no-repeat center center;
 }
 
 header, footer {
@@ -39,10 +38,8 @@ p, li, a { font-size: 1.8em;
 
 p { margin-bottom: 0.5em; line-height: 1.5em; }
 a { 
-  color: #f0ab32; 
   text-shadow: 3px 3px 0 #000;
   text-decoration: none;
-  &:hover { color: #fff; }
 }
 
 h1, .h1, h2, .h2, h3, .h3 { margin: 0; }
@@ -65,7 +62,7 @@ h3, .h3 { font-size: 2.1em; }
 
 .flip-wrapper {
   position: relative;
-  height: 100%;
+  height: 28em;
   -webkit-perspective: 800px;
      -moz-perspective: 800px;
       -ms-perspective: 800px;
@@ -124,13 +121,10 @@ h3, .h3 { font-size: 2.1em; }
   @include backface-visibility;
 }
 
-  
-// }
-
-.rtw-logo {
-  background: url(/images/rome-2-logo-md.png) no-repeat center center;
-  width: 320px;
-  height: 110px;
+.title { margin: 1em 0; }
+.logo {
+  background-repeat: no-repeat;
+  background-position: center center;
   margin: 1em auto;
   @include perspective-attrs(800px, 50%, 100px);
   @include hidden;
@@ -151,7 +145,6 @@ time.countdown {
   display: block;
   font-size: 8em;
   width: 100%;
-  color: #f0ab32;
   text-align: center;
   &.dup {
     top: 0.06em;
@@ -159,4 +152,15 @@ time.countdown {
     z-index: 199;
     color: #000;
   }
+}
+
+.spinner {
+  display: block;
+  width: 80em;
+  height: 28em;
+  margin: 1em auto;
+  background-image: url(/images/ajax-loader.gif);
+  background-repeat: no-repeat;
+  background-position: center center;
+  @include hidden;
 }
