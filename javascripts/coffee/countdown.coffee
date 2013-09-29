@@ -18,7 +18,7 @@ init_countdown = () ->
 
 get_countdown_attrs = () ->
 	$.get "/javascripts/graduation.json", (data) ->
-		$.each data, (key, object) ->
+		$.each JSON.parse(data), (key, object) ->
 			$('.title').addClass 'logo' if object.logo
 			$('.title').html key
 

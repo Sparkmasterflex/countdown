@@ -2,3 +2,7 @@
 *.scssc
 
 .sass-cache/883e7373f67b13adad551161f788453c7d5a6d43/base.scssc
+
+Capfile
+
+config/deploy.rb
