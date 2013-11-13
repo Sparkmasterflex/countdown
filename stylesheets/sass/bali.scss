@@ -1,0 +1,35 @@
+$bg-color: #008080;
+$link-color: #8FD8D8; //#528B8B;
+
+body {
+  background: $bg-color;
+}
+
+.slideshow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  img { width: 100%; }
+  .cycle-caption {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 150;
+    font-size: 3em;
+    padding: 0.25em 0.5em;
+    background-color: rgba($bg-color, 0.6);
+    color: #fff;
+  }
+}
+
+a {
+  color: $link-color;
+  &:hover { color: darken($link-color, 10%); }
+}
+
+time.countdown {
+  color: $link-color;
+}
+
+p { color: #fff; }

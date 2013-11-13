@@ -1,0 +1,30 @@
+body {
+  background: teal; }
+
+.slideshow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; }
+  .slideshow img {
+    width: 100%; }
+  .slideshow .cycle-caption {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 150;
+    font-size: 3em;
+    padding: 0.25em 0.5em;
+    background-color: rgba(0, 128, 128, 0.6);
+    color: #fff; }
+
+a {
+  color: #8fd8d8; }
+  a:hover {
+    color: #69cbcb; }
+
+time.countdown {
+  color: #8fd8d8; }
+
+p {
+  color: #fff; }

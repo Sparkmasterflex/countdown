@@ -7,6 +7,17 @@
     $('a[rel=external]').bind('click', function() {
       return this.target = "_blank";
     });
+    $('.slideshow').cycle({
+      delay: 4000,
+      speed: 1500,
+      loader: 'wait',
+      caption: "#alt-caption",
+      captionTemplate: "{{alt}}"
+    });
+    $('a.twitter').click(function(e) {
+      window.location = "http://twitter.com/share?url=http://countdown.ifkeithraymond.com&text=" + ($('time.countdown').html()) + " till Jane and Keith's Trip!&hashtag=bankokBaliLombok";
+      return false;
+    });
     return init_countdown();
   });
 
@@ -16,7 +27,7 @@
   };
 
   get_countdown_attrs = function() {
-    return $.get("/javascripts/graduation.json", function(data) {
+    return $.get("/javascripts/bali.json", function(data) {
       return $.each(data, function(key, object) {
         if (object.logo) $('.title').addClass('logo');
         $('.title').html(key);

@@ -1,4 +1,3 @@
-/*------------------------------------------------ CSS3 Crossbrowser ----*/
 body {
   background: #07294d url(/images/masters-degree/drexel.jpg) no-repeat center center; }
 
@@ -9,3 +8,8 @@ a {
 
 time.countdown {
   color: #ffc600; }
+
+.logo {
+  background-image: url(images/nothing.png);
+  width: 200px;
+  height: 100px; }

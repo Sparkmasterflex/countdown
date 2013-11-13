@@ -69,7 +69,7 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a {
   font-size: 1em; }
 
 #content {
-  margin: 27em 0 10em; }
+  padding: 10em 0; }
   #content section {
     max-width: 80em;
     width: 100%;
@@ -81,6 +81,7 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a {
 
 .flip-wrapper {
   position: relative;
+  z-index: 300;
   height: 28em;
   -webkit-perspective: 800px;
   -moz-perspective: 800px;
@@ -227,3 +228,13 @@ time.countdown {
   background-position: center center;
   text-indent: -9999px;
   overflow: hidden; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.three-quarters {
+  width: 75%;
+  margin: 1em auto; }

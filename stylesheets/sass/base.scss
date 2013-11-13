@@ -24,8 +24,8 @@ menu { list-style: none; }
 html {-webkit-font-smoothing: antialiased; }
 
 
-body { 
-  font: { size: 62.5%; family: Arial, Helvetica, san-serif; } 
+body {
+  font: { size: 62.5%; family: Arial, Helvetica, san-serif; }
 }
 
 header, footer {
@@ -37,7 +37,7 @@ p, li, a { font-size: 1.8em;
 }
 
 p { margin-bottom: 0.5em; line-height: 1.5em; }
-a { 
+a {
   text-shadow: 3px 3px 0 #000;
   text-decoration: none;
 }
@@ -50,7 +50,7 @@ h3, .h3 { font-size: 2.1em; }
 
 
 #content {
-  margin: 27em 0 10em;
+  padding: 10em 0;
   section {
     max-width: 80em;
     width: 100%;
@@ -62,6 +62,7 @@ h3, .h3 { font-size: 2.1em; }
 
 .flip-wrapper {
   position: relative;
+  z-index: 300;
   height: 28em;
   -webkit-perspective: 800px;
      -moz-perspective: 800px;
@@ -108,10 +109,10 @@ h3, .h3 { font-size: 2.1em; }
   @include gradient-two(rgba(#222, 0.7), rgba(#444, 0.9));
   border: 1px solid #888;
   @include preserve-3d;
-  -webkit-box-sizing: border-box; 
-     -moz-box-sizing: border-box; 
-      -ms-box-sizing: border-box; 
-       -o-box-sizing: border-box; 
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+       -o-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-transform: rotateY(180deg);
      -moz-transform: rotateY(180deg);
@@ -163,4 +164,12 @@ time.countdown {
   background-repeat: no-repeat;
   background-position: center center;
   @include hidden;
+}
+
+.left { float: left; }
+.right { float: right; }
+
+.three-quarters {
+  width: 75%;
+  margin: 1em auto;
 }

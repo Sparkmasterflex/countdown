@@ -3,12 +3,17 @@ $ ->
 	$('.flip-front').append "<span class='spinner'>Loading</span>"
 	$('a[rel=external]').bind 'click', () -> this.target = "_blank"
 
+	$('.slideshow').cycle
+		delay: 4000
+		speed: 1500
+		loader: 'wait'
+		caption: "#alt-caption"
+		captionTemplate: "{{alt}}"
 
-	# $('a.twitter').click (e) ->
-	# 	# status = " "
-	# 	# window.location = "http://twitter.com/home?status=#{status}&has"
-	# 	window.location = "http://twitter.com/share?url=http://countdown.ifkeithraymond.com&text=#{$('time.countdown').html()} till Rome Total War 2!&hashtag=RomeTotalWar2"
-	# 	false
+
+	$('a.twitter').click (e) ->
+		window.location = "http://twitter.com/share?url=http://countdown.ifkeithraymond.com&text=#{$('time.countdown').html()} till Jane and Keith's Trip!&hashtag=bankokBaliLombok"
+		false
 
 	init_countdown()
 
@@ -17,15 +22,15 @@ init_countdown = () ->
 	build_timer()
 
 get_countdown_attrs = () ->
-	$.get "/javascripts/graduation.json", (data) ->
-		$.each JSON.parse(data), (key, object) ->
+	$.get "/javascripts/bali.json", (data) ->
+		$.each data, (key, object) ->
 			$('.title').addClass 'logo' if object.logo
 			$('.title').html key
 
 			$('time.release-date')
 			.attr('datetime', object.date)
 			.html moment(object.date).format("MMMM D, YYYY")
-			
+
 			$('a.learn-more').attr('href', object.link)
 
 build_timer = () ->
