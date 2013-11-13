@@ -28,7 +28,7 @@
 
   get_countdown_attrs = function() {
     return $.get("/javascripts/bali.json", function(data) {
-      return $.each(data, function(key, object) {
+      return $.each(JSON.parse(data), function(key, object) {
         if (object.logo) $('.title').addClass('logo');
         $('.title').html(key);
         $('time.release-date').attr('datetime', object.date).html(moment(object.date).format("MMMM D, YYYY"));

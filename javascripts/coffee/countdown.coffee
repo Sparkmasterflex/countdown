@@ -22,8 +22,8 @@ init_countdown = () ->
 	build_timer()
 
 get_countdown_attrs = () ->
-	$.get JSON.parse("/javascripts/bali.json"), (data) ->
-		$.each data, (key, object) ->
+	$.get "/javascripts/bali.json", (data) ->
+		$.each JSON.parse(data), (key, object) ->
 			$('.title').addClass 'logo' if object.logo
 			$('.title').html key
 
